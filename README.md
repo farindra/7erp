@@ -50,3 +50,11 @@ environments/            contains environment-based overrides
 tests                    contains various tests for the advanced application
     codeception/         contains tests developed with Codeception PHP Testing Framework
 ```
+
+7erp 
+ini adalah aplikasi ERP berbasis WEB dan menggunakan framework Yii2, dibuat dengan tujuan untuk membantu perusahaan menengah kebawah dalam mengelolah perushaan debagai suatu kesatuan sistem yang terintegrasi.
+
+Aplikasi ini gratis untuk selamanya, boleh digunakan siapa saja dan kami menerima saran, kritik, kontribusi dan bantuan untuk pengembangan aplikasi ini kedepannya.
+
+Selamat Menggunakan. Semoga sukses dan bermanfaat. Terima Kasih.
+
