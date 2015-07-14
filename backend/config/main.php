@@ -12,6 +12,7 @@ return [
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log'],
     'modules' => [],
+    'homeUrl' => '/7erp/administrator',
     'components' => [
         'user' => [
             'identityClass' => 'common\models\User',
@@ -28,6 +29,15 @@ return [
         ],
         'errorHandler' => [
             'errorAction' => 'site/error',
+        ],
+        'request' => [
+            'baseUrl' => '/7erp/administrator',
+        ],
+        'urlManager' => [
+            'showScriptName' => false,	// Disable index.php
+            'enablePrettyUrl' => true,	// Disable r= routes
+            //'enableStrictParsing' => true,
+
         ],
     ],
     'params' => $params,

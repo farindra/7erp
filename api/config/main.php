@@ -11,7 +11,6 @@ return [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
-    'homeUrl' => '/7erp',
     'components' => [
         'user' => [
             'identityClass' => 'common\models\User',
@@ -29,16 +28,6 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
-        'request' => [
-            'baseUrl' => '/7erp',
-        ],
-        'urlManager' => [
-            'showScriptName' => false,	// Disable index.php
-            'enablePrettyUrl' => true,	// Disable r= routes
-            //'enableStrictParsing' => true,
-
-        ],
-
     ],
     'params' => $params,
 ];
