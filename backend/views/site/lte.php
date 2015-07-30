@@ -2,24 +2,9 @@
 
 
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>AdminLTE 2 | Dashboard</title>
-    <!-- Tell the browser to be responsive to screen width -->
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <!-- Bootstrap 3.3.4 -->
 
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]-->
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-</head>
-<body class="skin-blue sidebar-mini">
+
 <div class="wrapper">
 
 <header class="main-header">
@@ -52,7 +37,7 @@
                 <li><!-- start message -->
                     <a href="#">
                         <div class="pull-left">
-                            <img src="admin-lte/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image" />
+                            <img src="../img/user2-160x160.jpg" class="img-circle" alt="User Image" />
                         </div>
                         <h4>
                             Support Team
@@ -64,7 +49,7 @@
                 <li>
                     <a href="#">
                         <div class="pull-left">
-                            <img src="admin-lte/dist/img/user3-128x128.jpg" class="img-circle" alt="User Image" />
+                            <img src="../img/user3-128x128.jpg" class="img-circle" alt="User Image" />
                         </div>
                         <h4>
                             AdminLTE Design Team
@@ -76,7 +61,7 @@
                 <li>
                     <a href="#">
                         <div class="pull-left">
-                            <img src="admin-lte/dist/img/user4-128x128.jpg" class="img-circle" alt="User Image" />
+                            <img src="../img/user4-128x128.jpg" class="img-circle" alt="User Image" />
                         </div>
                         <h4>
                             Developers
@@ -88,7 +73,7 @@
                 <li>
                     <a href="#">
                         <div class="pull-left">
-                            <img src="admin-lte/dist/img/user3-128x128.jpg" class="img-circle" alt="User Image" />
+                            <img src="../img/user3-128x128.jpg" class="img-circle" alt="User Image" />
                         </div>
                         <h4>
                             Sales Department
@@ -100,7 +85,7 @@
                 <li>
                     <a href="#">
                         <div class="pull-left">
-                            <img src="admin-lte/dist/img/user4-128x128.jpg" class="img-circle" alt="User Image" />
+                            <img src="../img/user4-128x128.jpg" class="img-circle" alt="User Image" />
                         </div>
                         <h4>
                             Reviewers
@@ -228,13 +213,13 @@
 <!-- User Account: style can be found in dropdown.less -->
 <li class="dropdown user user-menu">
     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-        <img src="admin-lte/dist/img/user2-160x160.jpg" class="user-image" alt="User Image" />
+        <img src="../img/user2-160x160.jpg" class="user-image" alt="User Image" />
         <span class="hidden-xs">Alexander Pierce</span>
     </a>
     <ul class="dropdown-menu">
         <!-- User image -->
         <li class="user-header">
-            <img src="admin-lte/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image" />
+            <img src="../img/user2-160x160.jpg" class="img-circle" alt="User Image" />
             <p>
                 Alexander Pierce - Web Developer
                 <small>Member since Nov. 2012</small>
@@ -278,7 +263,7 @@
         <!-- Sidebar user panel -->
         <div class="user-panel">
             <div class="pull-left image">
-                <img src="admin-lte/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image" />
+                <img src="../img/user2-160x160.jpg" class="img-circle" alt="User Image" />
             </div>
             <div class="pull-left info">
                 <p>Alexander Pierce</p>
@@ -539,7 +524,7 @@
     <div class="box-body chat" id="chat-box">
         <!-- chat item -->
         <div class="item">
-            <img src="admin-lte/dist/img/user4-128x128.jpg" alt="user image" class="online" />
+            <img src="../img/user4-128x128.jpg" alt="user image" class="online" />
             <p class="message">
                 <a href="#" class="name">
                     <small class="text-muted pull-right"><i class="fa fa-clock-o"></i> 2:15</small>
@@ -561,7 +546,7 @@
         </div><!-- /.item -->
         <!-- chat item -->
         <div class="item">
-            <img src="admin-lte/dist/img/user3-128x128.jpg" alt="user image" class="offline" />
+            <img src="../img/user3-128x128.jpg" alt="user image" class="offline" />
             <p class="message">
                 <a href="#" class="name">
                     <small class="text-muted pull-right"><i class="fa fa-clock-o"></i> 5:15</small>
@@ -574,7 +559,7 @@
         </div><!-- /.item -->
         <!-- chat item -->
         <div class="item">
-            <img src="../web/img/user2-160x160.jpg" alt="user image" class="offline" />
+            <img src="../img/user2-160x160.jpg" alt="user image" class="offline" />
             <p class="message">
                 <a href="#" class="name">
                     <small class="text-muted pull-right"><i class="fa fa-clock-o"></i> 5:30</small>
@@ -1049,11 +1034,6 @@
 
 <!-- jQuery 2.1.4 -->
 
-<script type="text/javascript">
-    $( document ).ready(function() {
-        $.widget.bridge('uibutton', $.ui.button);
-        });
-</script>
 
-</body>
-</html>
+
+
