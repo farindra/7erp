@@ -11,7 +11,7 @@ return [
                         // Usually you don't need to specify it explicitly, since the module will detect it automatically
                         'idField' => 'user_id',        // id field of your User model that corresponds to Yii::$app->user->id
                         'usernameField' => 'username', // username field of your User model
-                        'searchClass' => 'app\models\UserSearch'    // fully qualified class name of your User model for searching
+                        //'searchClass' => 'app\models\UserSearch'    // fully qualified class name of your User model for searching
                     ]
                 ],
         ],
@@ -46,6 +46,10 @@ return [
                 // otherwise you may not even take a first step.
             ]
         ],
+        'cekbau' => [
+            'class' =>'common\components\CeksessionComponent'
+
+        ]
     ],
 
     'aliases' => [

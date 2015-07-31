@@ -26,14 +26,9 @@ class LteAsset extends AssetBundle
             'admin-lte/plugins/daterangepicker/daterangepicker-bs3.css',
             'admin-lte/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css',
 
-
-
-
         ];
     public $js =
         [
-
-
             'admin-lte/plugins/jQuery/jQuery-2.1.4.min.js',
             'https://code.jquery.com/ui/1.11.4/jquery-ui.min.js',
             //'admin-lte/dist/js/app.js',
