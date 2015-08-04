@@ -26,6 +26,7 @@ return [
     'components' => [
         'authManager' => [
             'class' => 'yii\rbac\DbManager',
+            'defaultRoles' => ['admin','editor','user'],
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
@@ -53,9 +54,9 @@ return [
             ]
         ],
         'cekbau' => [
-            'class' =>'common\components\CeksessionComponent'
+            'class' =>'common\components\CeksessionComponent',
 
-        ]
+        ],
     ],
 
     'aliases' => [
