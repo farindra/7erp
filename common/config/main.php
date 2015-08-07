@@ -26,6 +26,7 @@ return [
     'components' => [
         'authManager' => [
             'class' => 'yii\rbac\DbManager',
+            'defaultRoles' => ['Guest']
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
@@ -51,6 +52,10 @@ return [
                 // add a lot of actions here until you finally completed setting up rbac,
                 // otherwise you may not even take a first step.
             ]
+        ],
+        'testcode' => [
+            'class' =>'common\components\TestcodeComponent'
+
         ],
         'cekbau' => [
             'class' =>'common\components\CeksessionComponent'
