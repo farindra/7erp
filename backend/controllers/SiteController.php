@@ -26,7 +26,7 @@ class SiteController extends Controller
                         'allow' => true,
                     ],
                     [
-                        'actions' => ['login', 'error'],
+                        'actions' => ['loginuser', 'error'],
                         'allow' => true,
                     ],
                     [
@@ -64,6 +64,7 @@ class SiteController extends Controller
 
     public function actionLte()
     {
+        //$this->getView()->registerJsFile('admin-lte/dist/js/pages/dashboard.js',['sourcePath'=>'@bower/']);
         return $this->render('lte');
     }
 
@@ -82,6 +83,23 @@ class SiteController extends Controller
             ]);
         }
     }
+
+    public function actionLoginuser()
+    {
+        if (!\Yii::$app->user->isGuest) {
+            return $this->goHome();
+        }
+
+        $model = new LoginForm();
+        if ($model->load(Yii::$app->request->post()) && $model->login()) {
+            return $this->goBack();
+        } else {
+            return $this->render('loginuser', [
+                'model' => $model,
+            ]);
+        }
+    }
+
 
     public function actionLogout()
     {

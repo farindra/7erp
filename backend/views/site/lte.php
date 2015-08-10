@@ -1,6 +1,7 @@
 <?php
-
-
+use yii\helpers\Html;
+use backend\assets\Lte_dashboardAsset;
+Lte_dashboardAsset::register($this);
 ?>
 
 

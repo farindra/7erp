@@ -21,6 +21,9 @@ return [
                 //'route' => null, // disable menu route
             ]
         ],
+        'settings' => [
+            'class' => 'common\modules\settings\SettingsModule',
+        ],
      ],
     'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
     'components' => [

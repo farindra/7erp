@@ -12,7 +12,8 @@ use yii\web\View;
 
 class LteAsset extends AssetBundle
 {
-    public $sourcePath = '@bower/';
+   public $sourcePath = '@bower/';
+   public $baseUrl = '@web';
     public $css =
         [
             'admin-lte/dist/css/AdminLTE.min.css',
@@ -29,7 +30,7 @@ class LteAsset extends AssetBundle
         ];
     public $js =
         [
-            'admin-lte/plugins/jQuery/jQuery-2.1.4.min.js',
+            //'admin-lte/plugins/jQuery/jQuery-2.1.4.min.js',
             'https://code.jquery.com/ui/1.11.4/jquery-ui.min.js',
             //'admin-lte/dist/js/app.js',
             'admin-lte/bootstrap/js/bootstrap.min.js',
@@ -46,7 +47,8 @@ class LteAsset extends AssetBundle
             'admin-lte/plugins/slimScroll/jquery.slimscroll.min.js',
             'admin-lte/plugins/fastclick/fastclick.min.js',
             'admin-lte/dist/js/app.min.js',
-            'admin-lte/dist/js/pages/dashboard.js',
+            'admin-lte//plugins/iCheck/icheck.min.js',
+            //'admin-lte/dist/js/pages/dashboard.js',
             'admin-lte/dist/js/demo.js',
         ];
     public $jsOptions =

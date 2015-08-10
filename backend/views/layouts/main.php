@@ -9,7 +9,7 @@ use backend\assets\LteAsset;
 /* @var $this \yii\web\View */
 /* @var $content string */
 
-//AppAsset::register($this);
+AppAsset::register($this);
 LteAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
@@ -20,11 +20,13 @@ LteAsset::register($this);
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
+    <link rel="shortcut icon" href="<?= '../common/image/'.'favicon.ico';?>" type="image/x-icon" />
     <?php $this->head() ?>
     
 </head>
 <body class="skin-blue sidebar-mini">
-    <?php $this->beginBody() ?><?= $content ?>
+    <?php $this->beginBody() ?>
+    <?= $content ?>
 
 
     <footer class="footer">
@@ -36,10 +38,19 @@ LteAsset::register($this);
 
     <?php $this->endBody() ?>
 </body>
-<script type="text/javascript">
+<!--<script type="text/javascript">
     $( document ).ready(function() {
         $.widget.bridge('uibutton', $.ui.button);
     });
 </script>
+<script>
+    $(function () {
+        $('input').iCheck({
+            checkboxClass: 'icheckbox_square-blue',
+            radioClass: 'iradio_square-blue',
+            increaseArea: '20%' // optional
+        });
+    });
+</script>-->
 </html>
 <?php $this->endPage() ?>
