@@ -30,31 +30,13 @@ $this->params['breadcrumbs'][] = $this->title;
             //'id',
             'setting_name',
             'setting_value',
-            'status'=>
-            //'keterangan',
-            [
-                'label' => "Status",
-                'format' => 'raw',
-                'value' => function($status)
-                    {
-                        if($status->status==1) {
-                            $statusnya='<span class="label label-info">'.'Aktif'.'</span>';
-                        }else{
-                            $statusnya='<span class="label label-danger">'.'Tidak Aktif'.'</span>';
-                        }
-                        return $statusnya;//Html::label($statusnya,['class'=>'label label-info']);//. $statusnya; //Html::checkbox('chk1', true, ["page/update", "id" => $data->id]);
-
-                    },
-            ],
-
-
-
+            Yii::$app->gridview->statusTipe1('status','Test','Raw'),
             //'create_at',
             // 'create_by',
             // 'update_at',
             // 'update_by',
 
-            ['class' => 'yii\grid\ActionColumn'],
+            ['class' => 'yii\grid\ActionColumn','template' => '{view} {update} {delete}'],
         ],
     ]); ?>
 

@@ -63,6 +63,9 @@ return [
         'cekbau' => [
             'class' =>'common\components\CeksessionComponent'
 
+        ],
+        'gridview' => [
+            'class' =>'common\components\GridviewComponent'
         ]
     ],
 
