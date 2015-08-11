@@ -14,9 +14,7 @@ use yii\helpers\Html;
 class GridviewComponent extends Component {
 
     public $st;
-    public $stl;
-    public $stf;
-
+   
    /* public function init()
     {
         parent::init();
@@ -24,7 +22,7 @@ class GridviewComponent extends Component {
     }*/
 
 
-    public function statusTipe1($status,$label,$format){
+    public function statusTipe1($field,$label,$format){
       /**
        * @var adalah isi dari list grid view dan default field_nya
        * ON MAIN CONFIG
@@ -42,7 +40,7 @@ class GridviewComponent extends Component {
        *    ...
        * '  columns' => [
        *       ...,
-       *       Yii::$app->gridview->statusTipe1('namafield','namalabel','formatrow'),
+       *       Yii::$app->gridview->statusTipe1('namafield','namalabel','formatraw'),
        *        ...,
        *       ],
        * ]);
@@ -53,10 +51,8 @@ class GridviewComponent extends Component {
        *
        **/
 
-       $this->st=$status;
-       $this->stl=$label;
-       $this->stl=$format;
-
+       $this->st=$field;
+       
         $de_array=['label' => $label,'format' => $format,'value' =>
             function ($data){
                 $sts=$this->st;
