@@ -30,7 +30,7 @@ $this->params['breadcrumbs'][] = $this->title;
             //'id',
             'setting_name',
             'setting_value',
-            Yii::$app->gridview->statusTipe1('status','Test','Raw'),
+            Yii::$app->gridview->statusTipe1('status','Status','raw'),
             //'create_at',
             // 'create_by',
             // 'update_at',

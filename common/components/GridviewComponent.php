@@ -12,6 +12,17 @@ use yii\base\Component;
 use yii\helpers\Html;
 
 class GridviewComponent extends Component {
+    /**
+     * @var adalah isi dari list grid view dan default field_nya
+     * ON MAIN CONFIG
+     * ============================================================================
+     * 'components' => [
+     *       ...,
+     *      'gridview' => [
+     *                        'class' =>'common\components\GridviewComponent'
+     *                    ],
+     *
+     **/
 
     public $st;
    
@@ -24,16 +35,8 @@ class GridviewComponent extends Component {
 
     public function statusTipe1($field,$label,$format){
       /**
-       * @var adalah isi dari list grid view dan default field_nya
-       * ON MAIN CONFIG
-       * ============================================================================
-       * 'components' => [
-       *       ...,
-       *      'gridview' => [
-       *                        'class' =>'common\components\GridviewComponent'
-       *                    ],
+       * @var $field=target field, $label=label grid, $format=tipe data output
        * 
-       *
        * ON VIEW
        * ============================================================================
        * GridView::widget([
