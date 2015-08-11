@@ -36,7 +36,7 @@ class GridviewComponent extends Component {
     public function statusTipe1($field,$label,$format){
       /**
        * @var $field=target field, $label=label grid, $format=tipe data output
-       * 
+       *
        * ON VIEW
        * ============================================================================
        * GridView::widget([
