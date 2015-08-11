@@ -34,11 +34,16 @@ $this->params['breadcrumbs'][] = $this->title;
             //'keterangan',
             [
                 'label' => "Status",
-                'format' => 'text',
+                'format' => 'raw',
                 'value' => function($status)
-                    {   $statusnya = 'Aktif';
-                        if($status->status==0)  $statusnya='Tidak Aktif';
-                        return $statusnya;//. $statusnya; //Html::checkbox('chk1', true, ["page/update", "id" => $data->id]);
+                    {
+                        if($status->status==1) {
+                            $statusnya='<span class="label label-info">'.'Aktif'.'</span>';
+                        }else{
+                            $statusnya='<span class="label label-danger">'.'Tidak Aktif'.'</span>';
+                        }
+                        return $statusnya;//Html::label($statusnya,['class'=>'label label-info']);//. $statusnya; //Html::checkbox('chk1', true, ["page/update", "id" => $data->id]);
+
                     },
             ],
 
