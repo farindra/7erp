@@ -27,6 +27,17 @@ class GridviewComponent extends Component {
     public function statusTipe1($status,$label,$format){
       /**
        * @var adalah isi dari list grid view dan default field_nya
+       * ON MAIN CONFIG
+       * ============================================================================
+       * 'components' => [
+       *       ...,
+       *      'gridview' => [
+       *                        'class' =>'common\components\GridviewComponent'
+       *                    ],
+       * 
+       *
+       * ON VIEW
+       * ============================================================================
        * GridView::widget([
        *    ...
        * '  columns' => [
