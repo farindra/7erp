@@ -26,7 +26,7 @@ class SiteController extends Controller
                         'allow' => true,
                     ],
                     [
-                        'actions' => ['loginuser', 'error'],
+                        'actions' => ['login', 'error'],
                         'allow' => true,
                     ],
                     [

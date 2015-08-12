@@ -27,6 +27,8 @@ return [
      ],
     'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
     'components' => [
+        'backendSiteUrl' => 'http://localhost/7erp/administrator',
+        'frontendSiteUrl' => 'http://localhost/7erp',
         'authManager' => [
             'class' => 'yii\rbac\DbManager',
             'defaultRoles' => ['Guest']
