@@ -21,14 +21,20 @@ return [
                 //'route' => null, // disable menu route
             ]
         ],
-        'settings' => [
+        /*'settings' => [
             'class' => 'common\modules\settings\SettingsModule',
-        ],
+        ],*/
      ],
     'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
     'components' => [
         'backendSiteUrl' => 'http://localhost/7erp/administrator',
         'frontendSiteUrl' => 'http://localhost/7erp',
+        'session' => [
+            'class' => 'yii\web\Session',
+            'cookieParams' => ['httponly' => true, 'lifetime' => 100],
+            'timeout' => 100,
+            'useCookies' => true,
+        ],
         'authManager' => [
             'class' => 'yii\rbac\DbManager',
             'defaultRoles' => ['Guest']

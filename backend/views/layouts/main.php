@@ -3,6 +3,7 @@ use backend\assets\AppAsset;
 use yii\helpers\Html;
 use yii\widgets\Breadcrumbs;
 use backend\assets\LteAsset;
+use yii\bootstrap\Modal;
 
 /* @var $this \yii\web\View */
 /* @var $content string */
@@ -29,7 +30,7 @@ LteAsset::register($this);
         <div id="wrapper">
             <?= $this->render('_navigation'); ?>
             <div class="content-wrapper">
-                <section class="content-header">
+                <!--<section class="content-header">
                     <h1>
                         Dashboard
                         <small>Control panel</small>
@@ -41,10 +42,10 @@ LteAsset::register($this);
                 </section>
                 <section class="content">
                     <div class="main-container">
-                        <?= $content ?>
-                    </div>
-                </section>
 
+                    </div>
+                </section>-->
+                <?= $content ?>
             </div>
         </div>
         <footer class="main-footer">
@@ -221,8 +222,25 @@ LteAsset::register($this);
         <div class="control-sidebar-bg"></div>
 
     <?php endif ?>
+
+
     <?php $this->endBody() ?>
+
 </body>
+
 </html>
 <?php $this->endPage() ?>
+<?php
+Modal::begin([
+    'id' => 'myModal',
+    'toggleButton' => ['label' => 'click me'],
+    'header' => '<h4 class="modal-title">...</h4>',
+    'footer' => '<a href="#" class="btn btn-primary" data-dismiss="modal">Close</a>',
 
+]);
+
+
+echo '';
+
+Modal::end();
+?>

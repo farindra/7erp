@@ -13,6 +13,7 @@ return [
     'bootstrap' => ['log'],
     'modules' => [],
     'homeUrl' => '/7erp/administrator',
+
     'components' => [
         'user' => [
             'identityClass' => 'common\models\User',
@@ -39,6 +40,7 @@ return [
             //'enableStrictParsing' => true,
 
         ],
+
     ],
     'params' => $params,
 ];
