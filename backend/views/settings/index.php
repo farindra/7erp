@@ -50,6 +50,13 @@ $this->params['breadcrumbs'][] = $this->title;
                 //'id',
                 'setting_name',
                 'setting_value',
+                 [
+                    'attribute' => 'status',
+                    'format' => 'raw',
+                    'value' => function ($model, $index, $widget) {
+                            return Html::checkbox('foo[]', $model->status, ['value' => $index, 'disabled' => true]);
+                        },
+                ],
                 Yii::$app->gridview->statusTipe1('status','Status','raw'),
                 [
                     'header' => 'Jumlah Employee',

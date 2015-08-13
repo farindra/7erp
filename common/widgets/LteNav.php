@@ -5,12 +5,14 @@
  * @license http://www.yiiframework.com/license/
  */
 
-namespace yii\bootstrap;
+namespace common\widgets;
 
 use Yii;
 use yii\base\InvalidConfigException;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
+use yii\bootstrap;
+use yii\bootstrap\Widget;
 
 /**
  * Nav renders a nav HTML component.
@@ -47,7 +49,7 @@ use yii\helpers\Html;
  * @author Antonio Ramirez <amigo.cobos@gmail.com>
  * @since 2.0
  */
-class Nav extends Widget
+class LteNav extends Widget
 {
     /**
      * @var array list of items in the nav widget. Each array element represents a single

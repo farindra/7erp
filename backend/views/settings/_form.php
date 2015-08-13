@@ -41,5 +41,7 @@ $this->registerJs(
 
         <?php ActiveForm::end(); ?>
 
+
+
     <?php yii\widgets\Pjax::end() ?>
 </div>

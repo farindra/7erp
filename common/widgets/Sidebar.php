@@ -50,7 +50,7 @@ use yii\bootstrap\BootstrapAsset;
  * @author Antonio Ramirez <amigo.cobos@gmail.com>
  * @since 2.0
  */
-class Sidebar extends Widget
+class LteSidebar extends Widget
 {
     /**
      * @var array list of items in the nav widget. Each array element represents a single
