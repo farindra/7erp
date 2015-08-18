@@ -1,5 +1,5 @@
 <?php
-use yii\bootstrap\Nav;
+use common\widgets\ltenav\LteNav;
 
 /* @var $this \yii\web\View */
 
@@ -350,22 +350,36 @@ NavBar::end();
 </div>
 </nav>
 </header>
-<aside class="main-sidebar">
-    <section class="sidebar">
+
+<!--<aside class="main-sidebar">
+    <section class="sidebar">-->
     <?php
     if (!Yii::$app->user->isGuest) {
-        echo Nav::widget([
+        echo LteNav::widget([
+            'userpanel' => ['image' => '../img/user2-160x160.jpg','username'=>'Joko','status'=>true],
             'encodeLabels' => false,
             'items' => [
               [
-                  'label' => '<i class="fa fa-dashboard"></i> <span>Home</span> <i class="fa fa-angle-left pull-right"></i>',
+                  'label' => '<i class="fa fa-dashboard"></i><span>Home</span><i class="fa fa-angle-left pull-right"></i>',
+
                   'url' => ['site/index'],
                   'options' => ['class'=>'active treeview'],
+
               ],
+                    [
+              'label' => '<i class="fa fa-user"></i> <span>Home</span> <i class="fa fa-angle-left pull-right"></i>',
+              'items' => [
+                   ['label' => 'Level 1 - Dropdown A', 'url' => '#'],
+                   '<li class="divider"></li>',
+                   '<li class="dropdown-header">Dropdown Header</li>',
+                   ['label' => 'Level 1 - Dropdown B', 'url' => '#'],
+              ],
+          ],
+
             ],
             'options' => ['class' =>'sidebar-menu'], // set this to nav-tab to get tab-styled navigation
         ]);
     };
     ?>
-    </section>
-</aside>
+ <!--   </section>
+</aside>-->
