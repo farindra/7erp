@@ -65,7 +65,7 @@ class Dropdown extends Widget
     public function init()
     {
         parent::init();
-        Html::addCssClass($this->options, 'dropdown-menu');
+        Html::addCssClass($this->options, 'treeview-menu');
     }
 
     /**
@@ -110,7 +110,7 @@ class Dropdown extends Widget
                     $content = $label;
                     Html::addCssClass($itemOptions, 'dropdown-header');
                 } else {
-                    $content = Html::a($label, $url, $linkOptions);
+                    $content = Html::a('<i class="fa fa-circle-o"></i>'.$label, $url, $linkOptions);
                 }
             } else {
                 $submenuOptions = $options;

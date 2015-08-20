@@ -16,36 +16,31 @@ use yii\helpers\Html;
  *
  * For example:
  *
- * ```php
- * echo Nav::widget([
- *     'items' => [
- *         [
- *             'label' => 'Home',
- *             'url' => ['site/index'],
- *             'linkOptions' => [...],
- *         ],
- *         [
- *             'label' => 'Dropdown',
- *             'items' => [
- *                  ['label' => 'Level 1 - Dropdown A', 'url' => '#'],
- *                  '<li class="divider"></li>',
- *                  '<li class="dropdown-header">Dropdown Header</li>',
- *                  ['label' => 'Level 1 - Dropdown B', 'url' => '#'],
- *             ],
- *         ],
- *     ],
- *     'options' => ['class' =>'nav-pills'], // set this to nav-tab to get tab-styled navigation
- * ]);
- * ```
+ * echo LteNav::widget([
+ *       'userpanel' => ['image' => '../img/user2-160x160.jpg','username'=>'Joko','status'=>true],
+ *       'encodeLabels' => false,
+ *       'items' => [
+ *           [
+ *               'label' => 'Home',
+ *               'fa_icon' => 'fa-dashboard',
+ *               'url' => ['site/index'],
+ *               'options' => ['class'=>'active treeview'],
+ *
+ *           ],
+ *           [
+ *               'label' => 'Detail',
+ *               'items' => [
+ *                       ['label' => 'Level 1 - Dropdown A', 'url' => '#'],
+ *                       ['label' => 'Level 1 - Dropdown B', 'url' => '#'],
+ *                   ],
+ *               ],
+ *           ],
+ *       'options' => ['class' =>'sidebar-menu'], // set this to nav-tab to get tab-styled navigation
+ *       ]);
  *
  * Note: Multilevel dropdowns beyond Level 1 are not supported in Bootstrap 3.
  *
- * @see http://getbootstrap.com/components/#dropdowns
- * @see http://getbootstrap.com/components/#nav
- *
- * @author Antonio Ramirez <amigo.cobos@gmail.com>
- * @since 2.0
- */
+  */
 class LteNav extends Widget
 {
     /**
@@ -67,7 +62,7 @@ class LteNav extends Widget
     /**
      * @var boolean whether the nav items labels should be HTML-encoded.
      */
-    public $userpanel = [];
+    public $userpanel = [];public $fa_icon = []; // <---- new one
     /**
      * @var boolean whether the nav items labels should be HTML-encoded.
      */
@@ -118,7 +113,7 @@ class LteNav extends Widget
             $this->params = Yii::$app->request->getQueryParams();
         }
         if ($this->dropDownCaret === null) {
-            $this->dropDownCaret = Html::tag('b', '', ['class' => 'caret']);
+            //$this->dropDownCaret = Html::tag('b', '', ['class' => 'caret']);
         }
         Html::addCssClass($this->options, null);
     }
@@ -135,7 +130,7 @@ class LteNav extends Widget
     }
 
     /**
-     * Renders user panael Lte costum.
+     * Renders user panel Lte costum.
      * By : maseka
      *
      * <div class="user-panel">
@@ -204,10 +199,11 @@ class LteNav extends Widget
             throw new InvalidConfigException("The 'label' option is required.");
         }
         $encodeLabel = isset($item['encode']) ? $item['encode'] : $this->encodeLabels;
-        $label = $encodeLabel ? Html::encode($item['label']) : $item['label'];
+        $label = $encodeLabel ? '<span>'.Html::encode($item['label']).'</span><i class="fa fa-angle-left pull-right"></i>' : '<span>'.$item['label'].'</span><i class="fa fa-angle-left pull-right"></i>';
         $options = ArrayHelper::getValue($item, 'options', []);
         $items = ArrayHelper::getValue($item, 'items');
         $url = ArrayHelper::getValue($item, 'url', '#');
+        $fa_icon = '<i class="fa '.ArrayHelper::getValue($item, 'fa_icon', 'fa-square-o').'"></i>';
         $linkOptions = ArrayHelper::getValue($item, 'linkOptions', []);
 
         if (isset($item['active'])) {
@@ -217,9 +213,10 @@ class LteNav extends Widget
         }
 
         if ($items !== null) {
-            $linkOptions['data-toggle'] = 'dropdown';
-            Html::addCssClass($options, 'dropdown');
-            Html::addCssClass($linkOptions, 'dropdown-toggle');
+            //$linkOptions['data-toggle'] = 'dropdown';
+            //Html::addCssClass($options, 'dropdown'); <--- original
+            Html::addCssClass($options, 'treeview');
+            //Html::addCssClass($linkOptions, 'dropdown-toggle');
             if ($this->dropDownCaret !== '') {
                 $label .= ' ' . $this->dropDownCaret;
             }
@@ -235,7 +232,7 @@ class LteNav extends Widget
             Html::addCssClass($options, 'active');
         }
 
-        return Html::tag('li', Html::a($label, $url, $linkOptions) . $items, $options);
+        return Html::tag('li', Html::a($fa_icon.$label, $url, $linkOptions) . $items, $options);
     }
 
     /**

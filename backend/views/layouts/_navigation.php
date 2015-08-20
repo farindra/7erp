@@ -351,29 +351,27 @@ NavBar::end();
 </nav>
 </header>
 
-<!--<aside class="main-sidebar">
-    <section class="sidebar">-->
+
     <?php
     if (!Yii::$app->user->isGuest) {
         echo LteNav::widget([
             'userpanel' => ['image' => '../img/user2-160x160.jpg','username'=>'Joko','status'=>true],
             'encodeLabels' => false,
             'items' => [
-              [
-                  'label' => '<i class="fa fa-dashboard"></i><span>Home</span><i class="fa fa-angle-left pull-right"></i>',
+                            [
+                                'label' => 'Home',
+                                'fa_icon' => 'fa-dashboard',
+                                'url' => ['site/index'],
+                                'options' => ['class'=>'active treeview'],
 
-                  'url' => ['site/index'],
-                  'options' => ['class'=>'active treeview'],
-
-              ],
-                    [
-              'label' => '<i class="fa fa-user"></i> <span>Home</span> <i class="fa fa-angle-left pull-right"></i>',
-              'items' => [
-                   ['label' => 'Level 1 - Dropdown A', 'url' => '#'],
-                   '<li class="divider"></li>',
-                   '<li class="dropdown-header">Dropdown Header</li>',
-                   ['label' => 'Level 1 - Dropdown B', 'url' => '#'],
-              ],
+                            ],
+                            [
+                                'label' => 'Detail',
+                                'fa_icon' => 'fa-cog fa-spin fa-fw margin-bottom',
+                                'items' => [
+                                                ['label' => 'Level 1 - Dropdown A', 'url' => '#'],
+                                                ['label' => 'Level 1 - Dropdown B', 'url' => '#'],
+                            ],
           ],
 
             ],
@@ -381,5 +379,4 @@ NavBar::end();
         ]);
     };
     ?>
- <!--   </section>
-</aside>-->
+
