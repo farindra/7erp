@@ -24,6 +24,9 @@ return [
         /*'settings' => [
             'class' => 'common\modules\settings\SettingsModule',
         ],*/
+        'ltenav' => [
+            'class' => 'common\modules\ltenav\LtenavModules',
+        ],
      ],
     'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
     'components' => [
