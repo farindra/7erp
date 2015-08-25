@@ -60,18 +60,25 @@ $this->params['breadcrumbs'][] = $this->title;
 
             <div class="dd" id="nestable">
                 <ol class="dd-list">
-                    <li class="dd-item" data-id="1" data-label="Monyet" data-icon="camera-retro">
-                        <div class="dd-handle col-lg-10"><i class="fa fa-camera-retro fa-1x"></i> Item 1
+                    <li class="dd-item" data-label="Monyet" data-icon="camera-retro">
+                        <div class="dd-handle"><i class="fa fa-camera-retro fa-1x"></i><span>&nbsp;&nbsp;</span><input id="1" class="dd-nodrag" value="menu1">
 
                         </div>
-                        <button class="dd-nodrag col-lg-2 btn btn-block btn-default btn-xs">Default</button>
+
                     </li>
-                    <li class="dd-item" data-id="1" data-label="Monyet" data-icon="camera-retro">
-                        <div class="dd-handle col-lg-10"><i class="fa fa-camera-retro fa-1x"></i> Item 1
+                    <li class="dd-item" data-label="Monyet" data-icon="camera-retro">
+                        <div class="dd-handle"><i class="fa fa-camera-retro fa-1x"></i><span>&nbsp;&nbsp;</span><input id="2" class="dd-nodrag" value="menu2">
 
                         </div>
-                        <button class="dd-nodrag col-lg-2 btn btn-block btn-default btn-xs">Default</button>
+
                     </li>
+                    <li class="dd-item" data-label="Monyet" data-icon="camera-retro">
+                        <div class="dd-handle"><i class="fa fa-camera-retro fa-1x"></i><span>&nbsp;&nbsp;</span><input id="3" class="dd-nodrag" value="menu3">&nbsp;&nbsp; Link :&nbsp;&nbsp;<input id="3" class="dd-nodrag" value="link">
+
+                        </div>
+
+                    </li>
+
 
                     <!--<li class="dd-item" data-id="2">
                         <div class="dd-handle">Item 2</div>
