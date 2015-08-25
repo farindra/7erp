@@ -11,7 +11,11 @@ return [
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log'],
-    'modules' => [],
+    'modules' => [
+        'ltenav' => [
+            'class' => 'common\modules\ltenav\LtenavModules',
+            ],
+    ],
     'homeUrl' => '/7erp/administrator',
 
     'components' => [

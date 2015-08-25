@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "22c80e0ee6e969d46caf9f3a0e37dfe7",
+    "hash": "4158cd54465ddd579e182c69768011d3",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -313,56 +313,6 @@
             "time": "2015-01-27 10:53:51"
         },
         {
-            "name": "dektrium/yii2-rbac",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/dektrium/yii2-rbac.git",
-                "reference": "c4c9f8e5e289f1807eea5213b62f1051608cf4af"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/dektrium/yii2-rbac/zipball/c4c9f8e5e289f1807eea5213b62f1051608cf4af",
-                "reference": "c4c9f8e5e289f1807eea5213b62f1051608cf4af",
-                "shasum": ""
-            },
-            "require": {
-                "kartik-v/yii2-widget-select2": "*",
-                "yiisoft/yii2": "2.0.*"
-            },
-            "type": "yii2-extension",
-            "extra": {
-                "bootstrap": "dektrium\\rbac\\Bootstrap"
-            },
-            "autoload": {
-                "psr-4": {
-                    "dektrium\\rbac\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Dmitry Erofeev",
-                    "email": "dmeroff@gmail.com",
-                    "homepage": "http://dmeroff.ru"
-                }
-            ],
-            "description": "RBAC management module for Yii2",
-            "keywords": [
-                "dektrium",
-                "rbac gui",
-                "rbac management",
-                "rbac module",
-                "yii rbac",
-                "yii2",
-                "yii2-rbac"
-            ],
-            "time": "2015-07-27 18:54:47"
-        },
-        {
             "name": "ezyang/htmlpurifier",
             "version": "v4.6.0",
             "source": {
@@ -553,17 +503,17 @@
             "time": "2015-06-16 05:19:57"
         },
         {
-            "name": "kartik-v/yii2-widget-select2",
-            "version": "v2.0.2",
+            "name": "kartik-v/yii2-sortable",
+            "version": "v1.2.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/kartik-v/yii2-widget-select2.git",
-                "reference": "585e8797d7982e0c9d09370b98b451a028a59439"
+                "url": "https://github.com/kartik-v/yii2-sortable.git",
+                "reference": "650dfd6876115fbb996eb6eb8f1d5d13ddb69285"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kartik-v/yii2-widget-select2/zipball/585e8797d7982e0c9d09370b98b451a028a59439",
-                "reference": "585e8797d7982e0c9d09370b98b451a028a59439",
+                "url": "https://api.github.com/repos/kartik-v/yii2-sortable/zipball/650dfd6876115fbb996eb6eb8f1d5d13ddb69285",
+                "reference": "650dfd6876115fbb996eb6eb8f1d5d13ddb69285",
                 "shasum": ""
             },
             "require": {
@@ -572,7 +522,7 @@
             "type": "yii2-extension",
             "autoload": {
                 "psr-4": {
-                    "kartik\\select2\\": ""
+                    "kartik\\sortable\\": ""
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -586,32 +536,31 @@
                     "homepage": "http://www.krajee.com/"
                 }
             ],
-            "description": "Enhanced Yii2 wrapper for the Select2 jQuery plugin (sub repo split from yii2-widgets).",
-            "homepage": "https://github.com/kartik-v/yii2-widget-select2",
+            "description": "Create sortable lists and grids using HTML5 drag and drop API for Yii 2.0.",
+            "homepage": "https://github.com/kartik-v/yii2-sortable",
             "keywords": [
-                "dropdown",
+                "bootstrap",
                 "extension",
-                "form",
                 "jquery",
-                "plugin",
-                "select2",
+                "range",
+                "sortable",
                 "widget",
                 "yii2"
             ],
-            "time": "2015-07-01 15:20:59"
+            "time": "2015-06-17 17:34:48"
         },
         {
             "name": "mdmsoft/yii2-admin",
-            "version": "2.0.0",
+            "version": "2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mdmsoft/yii2-admin.git",
-                "reference": "38e480aed9306c2325e4f543714418f1cad15331"
+                "reference": "835875b0cc0bef1f12998c4c713494947b45cfcb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mdmsoft/yii2-admin/zipball/38e480aed9306c2325e4f543714418f1cad15331",
-                "reference": "38e480aed9306c2325e4f543714418f1cad15331",
+                "url": "https://api.github.com/repos/mdmsoft/yii2-admin/zipball/835875b0cc0bef1f12998c4c713494947b45cfcb",
+                "reference": "835875b0cc0bef1f12998c4c713494947b45cfcb",
                 "shasum": ""
             },
             "require": {
@@ -624,7 +573,7 @@
             "extra": {
                 "branch-alias": {
                     "dev-1.0.master": "1.0.x-dev",
-                    "dev-master": "2.0.x-dev"
+                    "dev-master": "2.x-dev"
                 }
             },
             "autoload": {
@@ -649,7 +598,7 @@
                 "rbac",
                 "yii"
             ],
-            "time": "2015-06-04 02:31:20"
+            "time": "2015-08-05 03:43:41"
         },
         {
             "name": "phpoffice/phpexcel",
@@ -763,16 +712,16 @@
         },
         {
             "name": "tinymce/tinymce",
-            "version": "4.2.3",
+            "version": "4.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tinymce/tinymce-dist.git",
-                "reference": "1dac1eba2f84f52710b30c68ae2f571f739d01a2"
+                "reference": "aafc1144b1561d6c8485f81f9d63495b5db575c8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tinymce/tinymce-dist/zipball/1dac1eba2f84f52710b30c68ae2f571f739d01a2",
-                "reference": "1dac1eba2f84f52710b30c68ae2f571f739d01a2",
+                "url": "https://api.github.com/repos/tinymce/tinymce-dist/zipball/aafc1144b1561d6c8485f81f9d63495b5db575c8",
+                "reference": "aafc1144b1561d6c8485f81f9d63495b5db575c8",
                 "shasum": ""
             },
             "type": "component",
@@ -805,7 +754,7 @@
                 "tinymce",
                 "wysiwyg"
             ],
-            "time": "2015-07-30 06:56:12"
+            "time": "2015-08-17 08:22:32"
         },
         {
             "name": "yiisoft/yii2",
@@ -1094,16 +1043,16 @@
     "packages-dev": [
         {
             "name": "bower-asset/admin-lte",
-            "version": "v2.2.0",
+            "version": "v2.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/almasaeed2010/AdminLTE.git",
-                "reference": "a6c2500da3cb4a333ca436f4f78cf09dd00ca9ba"
+                "reference": "81aa879d3a4489213888e24975b073c7478f0447"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/almasaeed2010/AdminLTE/zipball/a6c2500da3cb4a333ca436f4f78cf09dd00ca9ba",
-                "reference": "a6c2500da3cb4a333ca436f4f78cf09dd00ca9ba",
+                "url": "https://api.github.com/repos/almasaeed2010/AdminLTE/zipball/81aa879d3a4489213888e24975b073c7478f0447",
+                "reference": "81aa879d3a4489213888e24975b073c7478f0447",
                 "shasum": ""
             },
             "type": "bower-asset-library",
@@ -1447,8 +1396,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "phpoffice/phpexcel": 20,
-        "dektrium/yii2-rbac": 20
+        "phpoffice/phpexcel": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

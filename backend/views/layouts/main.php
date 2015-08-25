@@ -231,6 +231,7 @@ LteAsset::register($this);
 </html>
 <?php $this->endPage() ?>
 <?php
+/*
 Modal::begin([
     'id' => 'myModal',
     'toggleButton' => ['label' => 'click me'],
@@ -243,4 +244,4 @@ Modal::begin([
 echo '';
 
 Modal::end();
-?>
+*/?>
