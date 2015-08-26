@@ -1,7 +1,7 @@
 /**
  * Created by maseka on 8/25/15.
  */
-
+function sadayana(){
 ;(function($, window, document, undefined)
 {
     var hasTouch = 'ontouchstart' in document;
@@ -29,6 +29,7 @@
     var defaults = {
         listNodeName    : 'ol',
         itemNodeName    : 'li',
+        itemDivNodeName : 'i',
         rootClass       : 'dd',
         listClass       : 'dd-list',
         itemClass       : 'dd-item',
@@ -158,6 +159,7 @@
                 return array;
             };
             data = step(list.el.find(list.options.listNodeName).first(), depth);
+
             return data;
         },
 
@@ -480,4 +482,4 @@
 
         return retval || lists;
     };
-})(window.jQuery || window.Zepto, window, document);
+})(window.jQuery || window.Zepto, window, document);}

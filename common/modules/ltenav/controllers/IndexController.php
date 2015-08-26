@@ -38,6 +38,7 @@ class IndexController extends Controller
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
+            'de_path' => Yii::$app->basePath.'/../common/modules/ltenav/views/index/user.png',//'/common/modules/ltenav/'
         ]);
     }
 
