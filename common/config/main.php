@@ -27,6 +27,7 @@ return [
         'ltenav' => [
             'class' => 'common\modules\ltenav\LtenavModules',
         ],
+        'gridview' => [ 'class' => '\kartik\grid\Module' ],
      ],
     'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
     'components' => [
