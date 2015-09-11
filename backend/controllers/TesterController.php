@@ -3,8 +3,8 @@
 namespace backend\controllers;
 
 use Yii;
-use backend\models\Menu;
-use backend\models\MenuSearch;
+use backend\models\Tester;
+use backend\models\TesterSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -12,13 +12,14 @@ use \yii\web\Response;
 use yii\helpers\Html;
 
 /**
- * MenuController implements the CRUD actions for Menu model.
+ * TesterController implements the CRUD actions for Tester model.
  */
-class MenuController extends Controller
+class TesterController extends Controller
 {
     /**
      * @inheritdoc
      */
+    public $enableCsrfValidation = false;
     public function behaviors()
     {
         return [
@@ -33,12 +34,12 @@ class MenuController extends Controller
     }
 
     /**
-     * Lists all Menu models.
+     * Lists all Tester models.
      * @return mixed
      */
     public function actionIndex()
     {    
-        $searchModel = new MenuSearch();
+        $searchModel = new TesterSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -49,7 +50,7 @@ class MenuController extends Controller
 
 
     /**
-     * Displays a single Menu model.
+     * Displays a single Tester model.
      * @param integer $id
      * @return mixed
      */
@@ -59,7 +60,7 @@ class MenuController extends Controller
         if($request->isAjax){
             Yii::$app->response->format = Response::FORMAT_JSON;
             return [
-                    'title'=> "Menu #".$id,
+                    'title'=> "Tester #".$id,
                     'content'=>$this->renderPartial('view', [
                         'model' => $this->findModel($id),
                     ]),
@@ -74,7 +75,7 @@ class MenuController extends Controller
     }
 
     /**
-     * Creates a new Menu model.
+     * Creates a new Tester model.
      * For ajax request will return json object
      * and for non-ajax request if creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
@@ -82,7 +83,7 @@ class MenuController extends Controller
     public function actionCreate()
     {
         $request = Yii::$app->request;
-        $model = new Menu();  
+        $model = new Tester();  
 
         if($request->isAjax){
             /*
@@ -91,7 +92,7 @@ class MenuController extends Controller
             Yii::$app->response->format = Response::FORMAT_JSON;
             if($request->isGet){
                 return [
-                    'title'=> "Create new Menu",
+                    'title'=> "Create new Tester",
                     'content'=>$this->renderPartial('create', [
                         'model' => $model,
                     ]),
@@ -102,15 +103,15 @@ class MenuController extends Controller
             }else if($model->load($request->post()) && $model->save()){
                 return [
                     'forceReload'=>'true',
-                    'title'=> "Create new Menu",
-                    'content'=>'<span class="text-success">Create Menu success</span>',
+                    'title'=> "Create new Tester",
+                    'content'=>'<span class="text-success">Create Tester success</span>',
                     'footer'=> Html::button('Close',['class'=>'btn btn-default pull-left','data-dismiss'=>"modal"]).
                             Html::a('Create More',['create'],['class'=>'btn btn-primary','role'=>'modal-remote'])
         
                 ];         
             }else{           
                 return [
-                    'title'=> "Create new Menu",
+                    'title'=> "Create new Tester",
                     'content'=>$this->renderPartial('create', [
                         'model' => $model,
                     ]),
@@ -135,7 +136,7 @@ class MenuController extends Controller
     }
 
     /**
-     * Updates an existing Menu model.
+     * Updates an existing Tester model.
      * For ajax request will return json object
      * and for non-ajax request if update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
@@ -153,7 +154,7 @@ class MenuController extends Controller
             Yii::$app->response->format = Response::FORMAT_JSON;
             if($request->isGet){
                 return [
-                    'title'=> "Update Menu #".$id,
+                    'title'=> "Update Tester #".$id,
                     'content'=>$this->renderPartial('update', [
                         'model' => $this->findModel($id),
                     ]),
@@ -163,7 +164,7 @@ class MenuController extends Controller
             }else if($model->load($request->post()) && $model->save()){
                 return [
                     'forceReload'=>'true',
-                    'title'=> "Menu #".$id,
+                    'title'=> "Tester #".$id,
                     'content'=>$this->renderPartial('view', [
                         'model' => $this->findModel($id),
                     ]),
@@ -172,7 +173,7 @@ class MenuController extends Controller
                 ];    
             }else{
                  return [
-                    'title'=> "Update Menu #".$id,
+                    'title'=> "Update Tester #".$id,
                     'content'=>$this->renderPartial('update', [
                         'model' => $this->findModel($id),
                     ]),
@@ -195,7 +196,7 @@ class MenuController extends Controller
     }
 
     /**
-     * Delete an existing Menu model.
+     * Delete an existing Tester model.
      * For ajax request will return json object
      * and for non-ajax request if deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
@@ -223,7 +224,7 @@ class MenuController extends Controller
     }
 
      /**
-     * Delete multiple existing Menu model.
+     * Delete multiple existing Tester model.
      * For ajax request will return json object
      * and for non-ajax request if deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
@@ -233,7 +234,7 @@ class MenuController extends Controller
     {        
         $request = Yii::$app->request;
         $pks = $request->post('pks'); // Array or selected records primary keys
-        foreach (Menu::findAll(json_decode($pks)) as $model) {
+        foreach (Tester::findAll(json_decode($pks)) as $model) {
             $model->delete();
         }
         
@@ -254,15 +255,15 @@ class MenuController extends Controller
     }
 
     /**
-     * Finds the Menu model based on its primary key value.
+     * Finds the Tester model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return Menu the loaded model
+     * @return Tester the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Menu::findOne($id)) !== null) {
+        if (($model = Tester::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

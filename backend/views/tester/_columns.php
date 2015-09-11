@@ -16,23 +16,11 @@ return [
     // ],
     [
         'class'=>'\kartik\grid\DataColumn',
-        'attribute'=>'name',
+        'attribute'=>'nama',
     ],
     [
         'class'=>'\kartik\grid\DataColumn',
-        'attribute'=>'parent',
-    ],
-    [
-        'class'=>'\kartik\grid\DataColumn',
-        'attribute'=>'route',
-    ],
-    [
-        'class'=>'\kartik\grid\DataColumn',
-        'attribute'=>'order',
-    ],
-    [
-        'class'=>'\kartik\grid\DataColumn',
-        'attribute'=>'data',
+        'attribute'=>'notlp',
     ],
     [
         'class' => 'kartik\grid\ActionColumn',

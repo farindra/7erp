@@ -5,12 +5,12 @@ namespace backend\models;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use backend\models\Menu;
+use backend\models\Tester;
 
 /**
- * MenuSearch represents the model behind the search form about `backend\models\Menu`.
+ * TesterSearch represents the model behind the search form about `backend\models\Tester`.
  */
-class MenuSearch extends Menu
+class TesterSearch extends Tester
 {
     /**
      * @inheritdoc
@@ -18,8 +18,8 @@ class MenuSearch extends Menu
     public function rules()
     {
         return [
-            [['id', 'parent', 'order'], 'integer'],
-            [['name', 'route', 'data'], 'safe'],
+            [['id', 'notlp'], 'integer'],
+            [['nama'], 'safe'],
         ];
     }
 
@@ -41,7 +41,7 @@ class MenuSearch extends Menu
      */
     public function search($params)
     {
-        $query = Menu::find();
+        $query = Tester::find();
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
@@ -57,13 +57,10 @@ class MenuSearch extends Menu
 
         $query->andFilterWhere([
             'id' => $this->id,
-            'parent' => $this->parent,
-            'order' => $this->order,
+            'notlp' => $this->notlp,
         ]);
 
-        $query->andFilterWhere(['like', 'name', $this->name])
-            ->andFilterWhere(['like', 'route', $this->route])
-            ->andFilterWhere(['like', 'data', $this->data]);
+        $query->andFilterWhere(['like', 'nama', $this->nama]);
 
         return $dataProvider;
     }

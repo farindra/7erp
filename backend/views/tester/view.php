@@ -3,19 +3,16 @@
 use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\Menu */
+/* @var $model backend\models\Tester */
 ?>
-<div class="menu-view">
+<div class="tester-view">
  
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
             'id',
-            'name',
-            'parent',
-            'route',
-            'order',
-            'data:ntext',
+            'nama',
+            'notlp',
         ],
     ]) ?>
 

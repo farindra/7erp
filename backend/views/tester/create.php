@@ -2,13 +2,13 @@
 
 use yii\helpers\Html;
 
-/* @var $this yii\web\View */
-/* @var $model backend\models\Menu */
-?>
-<div class="menu-update">
 
+/* @var $this yii\web\View */
+/* @var $model backend\models\Tester */
+
+?>
+<div class="tester-create">
     <?= $this->render('_form', [
         'model' => $model,
     ]) ?>
-
 </div>
